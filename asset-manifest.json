@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/racehorse/static/css/main.42daf487.css",
+    "main.js": "/racehorse/static/js/main.65e7b137.js",
+    "static/js/453.a6a89513.chunk.js": "/racehorse/static/js/453.a6a89513.chunk.js",
+    "index.html": "/racehorse/index.html",
+    "main.42daf487.css.map": "/racehorse/static/css/main.42daf487.css.map",
+    "main.65e7b137.js.map": "/racehorse/static/js/main.65e7b137.js.map",
+    "453.a6a89513.chunk.js.map": "/racehorse/static/js/453.a6a89513.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42daf487.css",
+    "static/js/main.65e7b137.js"
+  ]
+}

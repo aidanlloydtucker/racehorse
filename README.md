@@ -1,2 +1,0 @@
-# racehorse
-Racehorse Solver
