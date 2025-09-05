@@ -1,0 +1,97 @@
+.domino svg {
+    display: block;
+    margin: auto;
+}
+
+.domino-side svg {
+    transform: rotate(90deg);
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.domino-half-side {
+    height: 60px;
+}
+
+.domino-half-side svg {
+    transform: rotate(90deg);
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.domino-half-up {
+    height: 55px;
+}
+
+.domino-half-up svg {
+    transform: rotate(180deg);
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.domino-sm svg {
+    width: 50px;
+}
+
+.domino-half-sm svg {
+    width: 50px;
+}
+
+
+/*.domino-side {*/
+/*    transform: rotate(90deg);*/
+/*}*/
+
+/*.domino-side-sm {*/
+/*    height: 100%;*/
+/*    width: 50px;*/
+/*}*/
+
+.domino-clickable {
+    cursor: pointer;
+}
+
+/*.domino-up {*/
+/*    transform: rotate(180deg);*/
+/*}*/
+
+
+/*.domino-up {*/
+/*    transform: rotate(180deg);*/
+/*}*/
+
+/*.domino-half-wrap-up-sm {*/
+/*    display: block;*/
+/*    margin: auto;*/
+/*    overflow: hidden;*/
+/*    height: 38px;*/
+/*}*/
+/*.domino-half-up-sm {*/
+/*    height: 75px;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.domino-half-wrap-side-sm {*/
+/*    display: block;*/
+/*    margin: auto;*/
+/*    overflow: hidden;*/
+/*    width: 38px;*/
+/*}*/
+/*.domino-half-side-sm {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+
+
+
+.domino-inline {
+    display: inline-block;
+    position: relative;
+}
+.domino-inline div.domino-side {
+    width: 82px;
+    height: 50px;
+}
+.domino-inline .domino-half-up {
+    height: 25px;
+}
