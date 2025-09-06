@@ -138,7 +138,7 @@ function topScore(hand: Domino[], ends: DominoEnd[]): TopScorer {
                 let pMove = new StartMove(pDom)
                 let newHand = subHand(hand, dom)
                 let newEnds = dom.isDouble() ? [new DominoEnd(dom.h, EndType.Double)] : [new DominoEnd(dom.h, EndType.Normal), new DominoEnd(dom.l, EndType.Normal)]
-                let newScore = calcScore(newEnds)
+                let newScore = calcScore(newEnds);
 
                 if (canContinuePlay(newEnds, pMove)) {
                     let recScorer = topScore(newHand, newEnds);
@@ -166,7 +166,7 @@ function topScore(hand: Domino[], ends: DominoEnd[]): TopScorer {
                 if (pMove) {
                     let newHand = subHand(hand, dom)
                     let newEnds = playEnds(ends, pMove)
-                    let newScore = calcScore(newEnds)
+                    let newScore = calcScore(newEnds);
 
                     if (canContinuePlay(newEnds, pMove)) {
                         let recScorer = topScore(newHand, newEnds);
@@ -179,7 +179,7 @@ function topScore(hand: Domino[], ends: DominoEnd[]): TopScorer {
                             bestScorer.path = [pMove, ...recScorer.path]
                         }
                     } else {
-                        if (newScore >= bestScorer.score) {
+                        if (newScore >= bestScorer.score && 1 > bestScorer.path.length) {
                             bestScorer.score = newScore;
                             bestScorer.path = [pMove]
                         }
@@ -188,8 +188,6 @@ function topScore(hand: Domino[], ends: DominoEnd[]): TopScorer {
             }
         }
     }
-
-
 
     if (bestScorer.path.length === 0) {
         return {
@@ -257,7 +255,7 @@ function calcScore(ends: DominoEnd[]): number {
 }
 
 function canContinuePlay(newEnds: DominoEnd[], oldMove: Move): boolean {
-    return calcScore(newEnds) > 0 || ((oldMove instanceof PlayMove && oldMove.play.orientation === Orientation.Side) || (oldMove instanceof StartMove && oldMove.play.orientation === Orientation.Side))
+    return (calcScore(newEnds) > 0) || (oldMove instanceof PlayMove && oldMove.play.orientation === Orientation.Side) || (oldMove instanceof StartMove && oldMove.play.orientation === Orientation.Side);
 }
 
 function possibleMove(domino: Domino, end: DominoEnd): PlayMove | undefined {

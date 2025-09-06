@@ -93,6 +93,7 @@ function App() {
         }
 
         return topScorer?.path.map((move) => {
+            console.log(move.toString())
             if (move instanceof PlayMove) {
 
 
